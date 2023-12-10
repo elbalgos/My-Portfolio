@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
+    <title>My Personal Portfolio</title>
+    <style>
+        @media (max-width: 600px) {
+            #navbar li {
+                float: none;
+            }
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #2276cf;
+        }
+
+        #navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #navbar li {
+            float: left;
+        }
+
+        #navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #navbar li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .nav-list a {
+            display: block;
+            font-size: 2.2rem;
+            padding: 2rem;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+
+
+
+        .nav {
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+
+
+        .welcome-section {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .welcome-section h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section p {
+            font-size: 20px;
+        }
+
+
+
+        .projects-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .projects-section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .projects-section-header h2 {
+            font-size: 30px;
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project {
+            width: 250px;
+            height: 250px;
+            margin: 10px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .project-title {
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .project {
+            background: var(--main-gray);
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 2px;
+        }
+
+        :root {
+            --main-white: #f0f0f0;
+            --main-red: #be3144;
+            --main-blue: #094be7;
+            --main-gray: #303841;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--main-white);
+        }
+
+        .welcome-section>p {
+            font-size: 2rem;
+            font-weight: 50;
+            font-style: italic;
+            color: var(--main-red);
+
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .code {
+            font-family: monospace;
+            font-size: 14px;
+            color: #999;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0069d9;
+        }
+
+
+
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact-section-header {
+            margin-bottom: 30px;
+        }
+
+        .contact-section-header h2 {
+            font-size: 30px;
+        }
+
+        .contact-section-header p {
+            font-size: 18px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-details {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li><a href="#welcome-section">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="welcome-section" class="welcome-section">
+        <h1>Hey I'm Erickson</h1>
+        <p> Future web developer</p>
+    </section>
+
+
+
+    <section id="projects" class="projects-section">
+        <h2 class="projects-section-header">These are my projects</h2>
+
+        <div class="projects-grid">
+            <a href="" target="_blank" class="project project-tile">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+                    alt="project">
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    Tribute Page
+                    <span class="code">/&gt;</span>
+                </p>
+            </a>
+            <a href="" target="_blank" class="project project-tile">
+                <img class="project-image"
+                    src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
+                    alt="project">
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    Random Quote Machine
+                    <span class="code">/&gt;</span>
+                </p>
+            </a>
+            <a href="" target="_blank" class="project project-tile">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
+                    alt="project">
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    JavaScript Calculator
+                    <span class="code">/&gt;</span>
+                </p>
+            </a>
+            <a href="" target="_blank" class="project project-tile">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
+                    alt="project">
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    Map Data Across the Globe
+                    <span class="code">/&gt;</span>
+                </p>
+            </a>
+            <a href="" target="_blank" class="project project-tile">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png"
+                    alt="project">
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    Wikipedia Viewer
+                    <span class="code">/&gt;</span>
+                </p>
+            </a>
+            <a href="" target="_blank" class="project project-tile">
+                <img class="project-image"
+                    src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png" alt="project">
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    Tic Tac Toe Game
+                    <span class="code">/&gt;</span>
+                </p>
+            </a>
+        </div>
+
+        <a href="https://github.com/elbalgos/BALGOS-CIT14-2H.git" class="btn btn-show-all" target="_blank">Show all<i
+                class="fas fa-chevron-right"></i></a>
+    </section>
+
+
+
+    <section id="contact" class="contact-section">
+        <div class="contact-section-header">
+            <h2>Let's Collab together</h2>
+
+        </div>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/erickson.balgos.2416?mibextid=LQQJ4d" target="_blank"
+                class="btn contact-details"><i class="fab fa-facebook-square"></i> Facebook</a>
+            <a id="profile-link" href="https://github.com/elbalgos/BALGOS-CIT14-2H.git" target="_blank"
+                class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://instagram.com/sonbalgos?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr" target="_blank"
+                class="btn contact-details"><i class="fab fa-instagram"></i> instagram</a>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

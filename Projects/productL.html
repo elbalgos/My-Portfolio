@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Product Landing Page</title>
+    <style>
+        ody {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .logo {
+            width: 60vw;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            display: flex;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        div {
+            display: block;
+        }
+
+        #header-img {
+            width: 150px;
+            height: auto;
+        }
+
+        #nav-bar {
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .nav-link:hover {
+            color: #f39c12;
+        }
+
+        #video {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 100px auto;
+        }
+
+        #form {
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        #email {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        #submit {
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+        }
+
+        #features {
+            margin-top: 30px;
+        }
+
+        .section {
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+
+        @media (max-width: 768px) {
+            #header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-link {
+                margin: 10px 0;
+            }
+
+            #form {
+                width: 80%;
+            }
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: calc(100% / 3);
+            margin: 10px;
+            border: 1px solid #000;
+            border-radius: 3px;
+        }
+
+        #pricing {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .product>.level {
+            background-color: #ddd;
+            color: black;
+            padding: 15px 0;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .product>button {
+            border: 0;
+            margin: 15px 0;
+            background-color: red;
+            font-weight: 400;
+        }
+
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .btn {
+            padding: 0 20px;
+            height: 40px;
+            font-size: 1em;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: 3px black solid;
+            border-radius: 2px;
+            background: transparent;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header id="header">
+
+        <nav id="nav-bar">
+            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#how-it-works">How To Order</a>
+            <a class="nav-link" href="#pricing">Product/Pricing</a>
+        </nav>
+    </header>
+
+    <div id="page-wrapper">
+        <header id="header">
+            <div class="logo">
+                <img id="header-img"
+                    src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+                    alt="original trombones logo">
+            </div>
+
+            <div class="container"></div>
+
+            <section id="hero">
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <form id="form" action="">
+                        <input name="email" id="email" type="email" placeholder="Enter your email address" required="">
+                        <input id="submit" type="submit" value="Sign in" class="btn">
+                    </form>
+            </section>
+
+            <div class="container">
+                <section id="features">
+                    <div class="grid">
+                        <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+                        <div class="desc">
+                            <h2>Premium Materials</h2>
+                            <p>
+                                Elevate your lifestyle with our exquisite Premium Materials collection a blend of luxury
+                                and
+                                durability, meticulously crafted for a sophisticated touch
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+                        <div class="desc">
+                            <h2>Fast Shipping</h2>
+                            <p>
+                                We make sure you recieve your trombone as soon as we have
+                                finished making it. We also provide free returns if you are not
+                                satisfied.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="icon">
+                            <i class="fa fa-3x fa-battery-full" aria-hidden="true"></i>
+                        </div>
+                        <div class="desc">
+                            <h2>Quality Assurance</h2>
+                            <p>
+                                Our commitment to quality assurance means that each product is held to the highest
+                                standards. From design to manufacturing, we meticulously oversee every step to ensure
+                                that
+                                you receive items that meet and exceed your expectations.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section id="how-it-works">
+                    <iframe id="video" height="315" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ;showinfo=0"
+                        frameborder="0" allowfullscreen=""></iframe>
+                </section>
+                <section id="pricing">
+                    <div class="product" id="tahong">
+                        <div class="level">Tahong</div>
+                        <h2>₱99/kilo</h2>
+                        <ul>
+                            <li>Fresh</li>
+                            <li>Yummy</li>
+                            <li>delicious</li>
+                            <li>Easy to open</li>
+                        </ul>
+                        <button class="btn">Select</button>
+                    </div>
+                    <div class="product" id="itlog">
+                        <div class="level">Golden Egg</div>
+                        <h2>₱42069</h2>
+                        <ul>
+                            <li>Premium Egg</li>
+                            <li>24k Gold</li>
+                        </ul>
+                        <button class="btn">Select</button>
+                    </div>
+                    <div class="product" id="talong">
+                        <div class="level">BBC Talong</div>
+                        <h2>₱699/kilo</h2>
+                        <ul>
+                            <li>Very large</li>
+                            <li>Very Wide</li>
+                        </ul>
+                        <button class="btn">Select</button>
+                    </div>
+                </section>
+                <footer>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <span>Copyright 2023</span>
+                </footer>
+            </div>
+    </div>
+</body>
+
+</html>
